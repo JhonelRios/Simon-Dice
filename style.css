@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dedede;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.gameboard {
+  height: 100vh;
+  width: 100vh;
+  max-height: 60vh;
+  max-width: 60vh;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.color {
+  height: 50%;
+  width: 50%;
+  display: inline-block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.celeste {
+  background-color: #22a6b3;
+}
+
+.celeste.light {
+  background-color: #7ed6df;
+}
+
+.violeta {
+  background-color: #be2edd;
+}
+
+.violeta.light {
+  background-color: #e056fd;
+}
+
+.naranja {
+  background-color: #f0932b;
+}
+
+.naranja.light {
+  background-color: #ffbe76;
+}
+
+.verde {
+  background-color: #6ab04c;
+}
+
+.verde.light {
+  background-color: #badc58;
+}
+
+.btn-start {
+  width: 400px;
+  height: 100px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 200px);
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
