@@ -4,7 +4,7 @@ const naranja = document.getElementById("naranja")
 const verde = document.getElementById("verde")
 const btnEmpezar = document.getElementById("btnEmpezar")
 
-const ULTIMO_NIVEL = 10
+const ULTIMO_NIVEL = 1
 
 class Juego {
     constructor() {
@@ -118,12 +118,12 @@ class Juego {
     }
 
     ganoElJuego() {
-        swal("Ganaste!", "Felicitaciones", "success")
+        swal("Ganaste!", "Felicitaciones :D", "success")
             .then(() => this.inicializar())
     }
 
     perdioElJuego() {
-        swal("Oh no :(!", "Vuelve a intentarlo", "error")
+        swal("Oh no :(", "Vuelve a intentarlo", "error")
             .then(() => {
                 this.eliminarEventosClick()
                 this.inicializar()
