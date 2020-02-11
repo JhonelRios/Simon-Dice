@@ -4,7 +4,7 @@ const naranja = document.getElementById("naranja")
 const verde = document.getElementById("verde")
 const btnEmpezar = document.getElementById("btnEmpezar")
 
-const ULTIMO_NIVEL = 1
+const ULTIMO_NIVEL = 10
 
 class Juego {
     constructor() {
@@ -16,13 +16,21 @@ class Juego {
 
     inicializar() {
         this.elegirColor = this.elegirColor.bind(this)
-        btnEmpezar.classList.add("hide")
+        this.toggleBtnEmpezar()
         this.nivel = 1
         this.colores = {
             celeste,
             violeta,
             naranja,
             verde
+        }
+    }
+
+    toggleBtnEmpezar() {
+        if (btnEmpezar.classList.contains("hide")) {
+            btnEmpezar.classList.remove("hide")
+        } else {
+            btnEmpezar.classList.add("hide")
         }
     }
 
