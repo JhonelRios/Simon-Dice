@@ -106,13 +106,28 @@ class Juego {
 
                 if (this.nivel === (ULTIMO_NIVEL + 1)) {
                     // Ganó
+                    this.ganoElJuego()
                 } else {
                     setTimeout(() => this.siguienteNivel(), 1500)
                 }
             }
         } else {
             // Perdió
+            this.perdioElJuego()
         }
+    }
+
+    ganoElJuego() {
+        swal("Ganaste!", "Felicitaciones", "success")
+            .then(() => this.inicializar())
+    }
+
+    perdioElJuego() {
+        swal("Oh no :(!", "Vuelve a intentarlo", "error")
+            .then(() => {
+                this.eliminarEventosClick()
+                this.inicializar()
+            })
     }
 }
 
